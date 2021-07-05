@@ -2962,8 +2962,6 @@ html, body {
   transform: translateY(0%);
 }
 .prorertyForm .prorertyForm-checkbox {
-  display: flex;
-  align-items: center;
   margin-bottom: 16px;
 }
 .prorertyForm .prorertyForm-checkbox label {
@@ -2971,8 +2969,20 @@ html, body {
   line-height: 18px;
   color: #333333;
   position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
-.prorertyForm .prorertyForm-checkbox label::after {
+.prorertyForm .prorertyForm-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin: 0 10px 0 0;
+  opacity: 1;
+  cursor: pointer;
+}
+/* .prorertyForm .prorertyForm-checkbox label::after {
   content: '';
   display: block;
   width: 20px;
@@ -2982,7 +2992,7 @@ html, body {
   border-radius: 4px;
   position: absolute;
   top: 50%;
-  left: -30px;
+  left: 0px;
   transform: translateY(-50%);
   pointer-events: none;
   transition: all .35s;
@@ -2998,26 +3008,18 @@ html, body {
   background: #fff;
   position: absolute;
   top: 50%;
-  left: -28px;
+  left: 2px;
   transform: translateY(-50%);
   z-index: 1;
   opacity: 0;
   transition: all .35s;
-}
-.prorertyForm .prorertyForm-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  margin: 0 10px 0 0;
-  opacity: 0;
-  cursor: pointer;
 }
 .prorertyForm .prorertyForm-checkbox input[type="checkbox"]:checked ~ label::after {
   background: #5947B3;
 }
 .prorertyForm .prorertyForm-checkbox input[type="checkbox"]:checked ~ label::before {
   opacity: 1;
-}
+} */
 .prorertyForm .prorertyForm-btn {
   background: #5947B3;
   border-radius: 4px;
